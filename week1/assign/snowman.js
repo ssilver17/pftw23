@@ -30,6 +30,10 @@ function draw() {
     strokeWeight(60);
     point(550, 310);
     point(610, 310);
+    stroke("#1e2928");
+    strokeWeight(20);
+    point(570, 310);
+    point(625, 310);
     //mouth
     stroke("#455e5c");
     strokeWeight(8);
