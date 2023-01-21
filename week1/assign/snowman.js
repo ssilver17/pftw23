@@ -8,7 +8,7 @@ function setup(){
 }
 
 function draw() {
-    background(grid);
+    //background(grid);
     //snowman bottom circle
     fill("#caf9fa");
     stroke("#1e2928");
