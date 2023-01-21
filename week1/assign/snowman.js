@@ -1,4 +1,5 @@
 let grid = undefined;
+let stroke1 = prompt("enter a basic color name in lower case", "blue");
 function setup(){
     createCanvas(1000, 800);
     background(210);
@@ -25,7 +26,7 @@ function draw() {
     fill("#455e5c")
     quad(550, 250, 525, 180, 675, 200, 700, 225);
     //eyes
-    stroke("#1e2928");
+    stroke(stroke1);
     strokeWeight(60);
     point(550, 310);
     point(610, 310);
