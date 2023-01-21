@@ -10,11 +10,11 @@ function draw() {
     //snowman bottom circle
     fill("#caf9fa");
     stroke("#1e2928");
-    ellipse(600, 650, 300);
+    ellipse(600, 700, 300, 250);
     //middle circle
-    ellipse(600, 400, 225, 250);
+    ellipse(600, 500, 225, 200);
     //head
-    ellipse(600, 200, 175);
+    ellipse(600, 325, 175);
 
 
 }
