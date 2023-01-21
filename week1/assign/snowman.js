@@ -23,7 +23,13 @@ function draw() {
     //hat shape
     strokeWeight(8);
     fill("#455e5c")
-    quad(550, 250, 525, 180, 675, 200, 700, 225)
+    quad(550, 250, 525, 180, 675, 200, 700, 225);
+    //eyes
+    stroke("#1e2928");
+    strokeWeight(60);
+    point(550, 310);
+    point(610, 310);
+
 
 
 
