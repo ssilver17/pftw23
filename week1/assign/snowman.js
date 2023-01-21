@@ -38,6 +38,13 @@ function draw() {
     stroke("#455e5c");
     strokeWeight(8);
     line(550, 350, 600, 365);
+    //arms
+    stroke("#455e5c");
+    strokeWeight(12);
+    line(480, 500, 580, 365);
+    line(700, 500, 580, 365);
+
+
 
 
 
