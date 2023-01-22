@@ -1,6 +1,6 @@
 let grid = undefined;
 let stroke1 = prompt("enter a basic color name in lower case", "blue");
-let canvas1 = prompt("enter another basic color in lower case", "grey");
+let canvas1 = prompt("enter another basic color in lower case", "orange");
 function setup(){
     createCanvas(1000, 800);
     background(canvas1);
@@ -44,6 +44,23 @@ function draw() {
     strokeWeight(12);
     line(480, 500, 580, 365);
     line(700, 500, 580, 365);
+    //house
+    noStroke();
+    fill("#14417d")
+    square(150, 300, 150);
+    //windows
+    noStroke();
+    fill("#eef0a9")
+    square(160, 320, 40, 10);
+    square(250, 320, 40, 10);
+    //roof
+    triangle(120, 300, 220, 210, 350, 300);
+    //door
+
+
+
+    
+
 
 
 
