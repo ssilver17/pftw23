@@ -54,9 +54,20 @@ function draw() {
     square(160, 320, 40, 10);
     square(250, 320, 40, 10);
     //roof
+    fill(20)
     triangle(120, 300, 220, 210, 350, 300);
     //door
     rect(240, 390, 30, 60);
+    //bushes left
+    fill("#116120")
+    ellipse(100, 400, 60, 60);
+    fill("#1da70f")
+    ellipse(75, 410, 40, 40);
+    //bushes right
+    fill("#116120")
+    ellipse(350, 420, 60, 60);
+    fill("#1da70f")
+    ellipse(375, 430, 40, 40);
 
 
 
