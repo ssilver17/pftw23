@@ -8,7 +8,7 @@ function setup(){
 }
 
 function draw() {
-    //background(grid);
+    background(grid);
     //snowman bottom circle
     fill("#caf9fa");
     stroke("#1e2928");
@@ -56,6 +56,8 @@ function draw() {
     //roof
     triangle(120, 300, 220, 210, 350, 300);
     //door
+    rect(240, 390, 30, 60);
+
 
 
 
