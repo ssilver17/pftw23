@@ -8,7 +8,7 @@ function setup(){
 }
 
 function draw() {
-    background(grid);
+    //background(grid);
     //snowman bottom circle
     fill("#caf9fa");
     stroke("#1e2928");
@@ -68,6 +68,9 @@ function draw() {
     ellipse(350, 420, 60, 60);
     fill("#1da70f")
     ellipse(375, 430, 40, 40);
+    //walkway
+    fill(220);
+    quad(250, 450, 280, 450, 400, 800, 300, 800);
 
 
 
