@@ -4,4 +4,4 @@ let yourMovie = prompt("What is the name of your favorite movie?");
 myMovies.push(yourMovie);
 console.log("My movies list updated", myMovies);
 console.log(myMovies.toString());
-alert("Our movies are" + myMovies.toString());
+alert("Our movies are " + myMovies.toString());
