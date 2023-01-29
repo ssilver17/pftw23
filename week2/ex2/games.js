@@ -5,6 +5,7 @@ const games = [
 ];
 console.log(games);
 let promptRespsonse = window.prompt("I have 3 games in my collection. Pick a number between 1 and 3 and I will tell you about that game.");
+console.log("You selected game " + promptRespsonse);
 if (promptRespsonse ==="1"){
     window.alert("You selected " + games[0].title  +  " which is a  " + games[0].type + games[0].shortDescription + " I give this game " + games[0].rating + " stars.")
 };
