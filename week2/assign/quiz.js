@@ -7,4 +7,8 @@ const questions = [
     answer: "11"},
     {question: "In what state does the Mississippi River begin?",
     answer: "Minnesota"},
-]
+];
+console.log(questions);
+const randomIdx = Math.round(Math.random() * (questions.length -1));
+console.log(randomIdx);
+window.prompt("Hello! " + questions[randomIdx].question);
