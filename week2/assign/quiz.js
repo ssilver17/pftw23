@@ -11,4 +11,6 @@ const questions = [
 console.log(questions);
 const randomIdx = Math.round(Math.random() * (questions.length -1));
 console.log(randomIdx);
-window.prompt("Hello! " + questions[randomIdx].question);
+let promptRespsonse = window.prompt("Hello! Do you want to play a game?  " + questions[randomIdx].question);
+
+window.alert("You answered " + promptRespsonse + " . The correct answer was " + questions[randomIdx].answer);
