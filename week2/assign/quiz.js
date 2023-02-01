@@ -1,5 +1,5 @@
 const questions = [
-    {question: "What are the two major Native American tribes that live in the area that is now Minnesota",
+    {question: "What are the two major Native American tribes that live in the area that is now know as Minnesota",
     answer: "Dakota and Anishinabe"},
     {question: "How many miles of rivers and streams are there is Minnesota?",
     answer: "69,200 miles"},
