@@ -45,11 +45,7 @@ function createTile() {
     strokeCap(SQUARE);
     line(0, 100, 40, 100);
     line(160, 100, 200, 100);
-
-
-
-
-    
+ 
 
 }
 function draw() {
