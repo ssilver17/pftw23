@@ -15,7 +15,6 @@ function draw() {
     background("#173454");
     drawShape();
     rectX += speed;
-
     if(rectX > width) {
     noLoop();
     text("Your score was " + clickCount, 200, 480);
