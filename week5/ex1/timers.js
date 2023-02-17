@@ -1,6 +1,6 @@
 let blockX = 0;
 let blockY = 0;
-let blockColor = HSB, 255;
+let blockColor = 255;
 let drawTimer;
 const speed = 15;
 const distance = 5;
