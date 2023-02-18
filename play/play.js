@@ -1,7 +1,5 @@
-var x = 25;
-var h = 20;
-var y = 25;
-
-function setup( {
-    background(204)
-})
+let greekMythicalCharacters = ["Athena", "Zeus", "Hermes", "Hercules", "Hera", "that one guy"];
+console.log(greekMythicalCharacters);
+greekMythicalCharacters.pop();
+greekMythicalCharacters.push("Hades");
+console.log(greekMythicalCharacters);
