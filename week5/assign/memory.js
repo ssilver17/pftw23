@@ -6,7 +6,7 @@ function setup() {
     createCanvas(900, 1000);
     background("#042152");
     noStroke();   
-    let myCard = new Card(); 
+     myCard = new Card(); 
 }
 
 function mousePressed() {
@@ -17,19 +17,20 @@ class Card {
     constructor() {
         this.x = 150;
         this.y = 250;
-        this.diameter = 150;
+        this.width = 150;
+        this.height = 150;
         this.face = "down";
         this.show();
     }
 
     show () {
         fill("#bef2f9");
-        ellipse(this.x, this.y, this.diameter);
+        square(this.x, this.y, this.width, 20);
     }
 
     didHit (mouseX, mouseY) {
-        if (mouseX >= this.x && mouseX <= this.x + this.diameter && 
-            mouseY >= this.y && mouseY <= this.y + this.diameter) {
+        if (mouseX >= this.x && mouseX <= this.x + this.width && 
+            mouseY >= this.y && mouseY <= this.y + this.width) {
             return true;
         } else {
             return false;
