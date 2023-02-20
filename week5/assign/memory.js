@@ -37,7 +37,7 @@ function setup() {
     for(let j = 0; j< 4; j++) {
         for(let i = 0; i < 4; i++) {   
             const faceImage = selectedFaces.pop();                 
-            cards.push(new Card(startingX, startingY, cardFaceArray[0])); 
+            cards.push(new Card(startingX, startingY, faceImage)); 
             startingX += 210;                       
     }
     startingY +=200;
