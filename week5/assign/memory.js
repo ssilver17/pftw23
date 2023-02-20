@@ -26,20 +26,18 @@ function setup() {
     createCanvas(900, 1000);
     background("#042152");
     noStroke(); 
- 
     let selectedFaces = [];
     for(let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardFaceArray.length));
         const face = cardFaceArray[randomIdx];
-        selectedFaces.push();
-        selectedFaces.push();
-        //remove the used cardface so it doesn't get ramdomly seleced again
-        cardFaceArray.splice(randomIdx, 1);
+        selectedFaces.push(face);
+        selectedFaces.push(face);
+        cardFaceArray.splice(randomIdx, 1); //starting getting an error when I add this line
     }
     for(let j = 0; j< 4; j++) {
         for(let i = 0; i < 4; i++) {   
-            const faceImage = selectedFaces.pop();                 
-            cards.push(new Card(startingX, startingY, faceImage)); 
+            const faceImage = selectedFaces.pop();               
+            cards.push(new Card(startingX, startingY, cardFaceArray[0])); 
             startingX += 210;                       
     }
     startingY +=200;
@@ -65,13 +63,13 @@ function mousePressed() {
 }
 
 class Card {
-    constructor(x, y, cardFaceImg) {             //parameters to change card positions
+    constructor(x, y, cardFaceImg) {            
         this.x = x;
         this.y = y;
         this.width = 150;
         this.height = 150;
         this.face = DOWN;
-        this.cardFaceImg = cardFaceImg;
+        this.cardFaceImg = cardFaceImg 
         this.show();
     }
 
