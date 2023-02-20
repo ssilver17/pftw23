@@ -1,7 +1,7 @@
 const DOWN = "down";
 const UP = "up";
 let startingX = 60;
-let startingY = 250;
+let startingY = 180;
 let cards = [];
 const gameState = {
 
@@ -23,7 +23,7 @@ function preload() {
     ]
 }
 function setup() {
-    createCanvas(900, 1060);
+    createCanvas(900, 1000);
     background("#042152");
     noStroke(); 
     fill("#ffba10");
