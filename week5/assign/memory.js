@@ -26,6 +26,13 @@ function setup() {
     createCanvas(900, 1060);
     background("#042152");
     noStroke(); 
+    fill("#ffba10");
+    noStroke();
+    quad(0, 0, 600, 0, 675, 125, 0, 125);   //header
+    fill("#9a700a");
+    noStroke();
+    quad(604, 0, 1000, 0, 1000, 125, 679, 125);     //tally
+    
     let selectedFaces = [];
     for(let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardFaceArray.length));
@@ -73,7 +80,7 @@ class Card {
         } else {
             fill("#aaa");
             square(this.x, this.y, this.width, 20);
-            image(cardBack, this.x, this.y, this.width, this.height);
+            image(this.cardFaceImg, this.x, this.y, this.width, this.height);
         }
        
     }
