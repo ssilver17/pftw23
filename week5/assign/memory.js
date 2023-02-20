@@ -26,13 +26,7 @@ function setup() {
     createCanvas(900, 1000);
     background("#042152");
     noStroke(); 
-    fill("#ffba10");
-    noStroke();
-    quad(0, 0, 600, 0, 675, 125, 0, 125);   //header
-    fill("#9a700a");
-    noStroke();
-    quad(604, 0, 1000, 0, 1000, 125, 679, 125);     //tally
-    
+ 
     let selectedFaces = [];
     for(let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardFaceArray.length));
@@ -51,6 +45,15 @@ function setup() {
     startingY +=200;
     startingX = 60;   //sets starting location for newrow                    
     } 
+}
+
+function draw() {
+    fill("#ffba10");
+    noStroke();
+    quad(0, 0, 600, 0, 675, 125, 0, 125);   //header
+    fill("#9a700a");
+    noStroke();
+    quad(604, 0, 1000, 0, 1000, 125, 679, 125);     //tally
 }
 
 function mousePressed() {
