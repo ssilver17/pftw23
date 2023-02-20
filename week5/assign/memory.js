@@ -8,6 +8,7 @@ const gameState = {
 };
 let cardFaceArray = [];
 let cardBack;
+
 function preload() {
     cardBack = loadImage("images/cardback.png");
     cardFaceArray = [
@@ -72,7 +73,7 @@ class Card {
         } else {
             fill("#aaa");
             square(this.x, this.y, this.width, 20);
-            image(this.cardFaceImg, this.x, this.y, this.width, this.height);
+            image(cardBack, this.x, this.y, this.width, this.height);
         }
        
     }
