@@ -16,7 +16,7 @@ function preload() {
         loadImage("images/bird02.jpg"),
         loadImage("images/bird03.jpg"),
         loadImage("images/bird04.jpg"),
-        loadImage("images/bird05.jpg"),
+        loadImage(""),
         loadImage("images/bird06.jpg"),
         loadImage("images/bird07.jpg"),
         loadImage("images/bird09.jpg")
@@ -32,12 +32,12 @@ function setup() {
         const face = cardFaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
-        cardFaceArray.splice(randomIdx, 1); //starting getting an error when I add this line
+        cardFaceArray.splice(randomIdx, 0); //starting getting an error when I add a number after randomIdx
     }
     for(let j = 0; j< 4; j++) {
         for(let i = 0; i < 4; i++) {   
             const faceImage = selectedFaces.pop();               
-            cards.push(new Card(startingX, startingY, cardFaceArray[0])); 
+            cards.push(new Card(startingX, startingY, faceImage)); 
             startingX += 210;                       
     }
     startingY +=200;
