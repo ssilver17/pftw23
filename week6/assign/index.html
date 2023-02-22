@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>10 Facts About LLamas</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="llamaApp"><h1>All About Llamas</h1>
+        <p>Llamas are domesticated animals from South America. They are of the same family as camels but don't have a hump. They have rather long ears which are curved slightly inward, known as banana-shaped. Their feet are narrow, their toes being more separate than those of camels, each with a distinct plantar pad. Llamas have a very short tail and their coat is long, soft, and woolly.</p>
+        <h2>Did you know... </h2> 
+        <ul>
+            <li>{{llamaHerd}}</li>
+            <li>{{llamaHum}}</li>
+            <li>{{llamaSpit}}</li>
+            <li>{{llamaTherapy}}</li>
+            <li>{{llamaColor}}</li>
+            <li>{{llamaLife}}</li>
+            <li>{{llamaBaby}}</li>
+            <li>{{llamaFood}}</li>
+            <li>{{llamaGuard}}</li>
+       
+            <li v-if="oldEnough">{{llamaPoop}}</li>
+        </ul>   
+        
+    
+    </div>
+    
+
+    <script src="llamas.js"></script>
+</body>
+</html>
