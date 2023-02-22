@@ -1,8 +1,8 @@
 const { createApp } = Vue;
 
 
-createApp({         //method. only sees inside the element its mounted to
-    data() {        //whatever this data method returns we have access to
+createApp({         
+    data() {        
        return {
         llamaPoop: "llama poop has almost no odor.",
         llamaHum: "llamas communicate by humming.",
@@ -14,7 +14,7 @@ createApp({         //method. only sees inside the element its mounted to
         llamaFood: "llamas are vegetarians",
         llamaHerd: "A group of llamas is called a herd.",
         llamaColor: "llamas come in a range of colors including, black, gray,beige, brown, red and white.",
-        oldEnough: true
+        oldEnough: true         //v-if directive, conditional
         }
     }
 }).mount("#llamaApp"); 
