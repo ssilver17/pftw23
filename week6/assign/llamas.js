@@ -13,7 +13,7 @@ createApp({
         llamaBaby: "A baby llama is called a cria",
         llamaFood: "Llamas are vegetarians",
         llamaHerd: "A group of llamas is called a herd.",
-        llamaColor: "Llamas come in a range of colors including, black, gray,beige, brown, red and white.",
+        llamaColor: "Llamas come in a range of colors including, black, gray,  beige, brown, red and white.",
         oldEnough: true         //v-if directive, conditional
         }
     }
