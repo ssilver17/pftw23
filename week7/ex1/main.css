@@ -44,7 +44,7 @@ p {
     color:rgb(23, 128, 157)
   }
 
-  .active {
+  a .active {
     color: rgb(230, 164, 10);
     border-bottom: 1px solid grey;
   }
