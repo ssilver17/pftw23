@@ -17,3 +17,16 @@ html {
     width: 45%;
     text-align: center;
   }
+
+ .llama {
+  color:rgb(255, 0, 221);
+  font-weight: 900;
+ }
+
+ .odd {
+  background: rgba(28, 243, 243, 0.636);
+ }
+
+ td{
+  text-align: center;
+ }
