@@ -12,7 +12,7 @@
     <h1 class="llama-list-title">What to name your next llama</h1>
     <div class="list-container">
       <div class="list-head">
-        <table>
+        <table class="table-body">
             <thead>
                 <th>Rank</th>
                 <th>Name</th>
@@ -21,9 +21,7 @@
                 <tr v-for="(thing, idx) in llamas"
                     v-bind:class="{
                         'llama': thing.name.toLowerCase().includes('llama'),
-                        'odd': idx%2===0
-                    }">
-                   
+                        'odd': idx%2===0}">
                     <td>{{thing.rank}}</td>
                     <td>{{thing.name}}</td>
                 </tr>
