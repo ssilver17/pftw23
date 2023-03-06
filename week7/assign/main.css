@@ -1,0 +1,40 @@
+html {
+    margin: 50px;
+    background-color: rgba(204, 245, 246, 0.756);
+}
+
+body {
+    font-family: roboto slab;
+  }
+
+  h1 {
+    color: rgb(2, 44, 48);
+    font-size: 60px;
+    border-bottom: 5px dotted ;
+  }
+
+  table, thead, th, tbody, tr, td {
+    border: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  thead {
+    color: rgb(2, 44, 48);
+  }
+
+  .odd {
+    background: rgba(235, 201, 89, 0.709);
+  }
+
+  .blues {
+    color:rgb(18, 86, 125)
+  }
+
+  p {
+    font-family: roboto condensed;
+    font-size: 14px;
+    margin-left: 660px;
+
+  }
+
