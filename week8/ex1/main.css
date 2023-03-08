@@ -21,3 +21,8 @@ div label {
 div input, div select {
     flex-grow: 1;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}

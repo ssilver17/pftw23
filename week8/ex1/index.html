@@ -32,10 +32,19 @@
                 <div class="alpaca-color">
                     <p>Favorite Alpaca Colors</p>
                     <div>
-                        <label for=""> Color
-                            <input type="checkbox"
-                            name="" id="">
-                        </label>
+                        <ul>
+                            <li v-for="color in colors">
+                                <label v-bind:for="color.value"> 
+                                    <input type="checkbox"
+                                    name="" 
+                                    v-model="selectedColors"
+                                    v-bind:id="color.value" 
+                                    v-bind:value="color.value">
+                                    {{color.name}}
+                                </label>
+                            </li>
+                        </ul>
+                    
                     </div>
                 </div>
                 <div class="alpaca-status">
@@ -51,6 +60,7 @@
                 Last Name: {{lastName}}<br>
                 Street: {{street}}<br>
                 State: {{state}}<br>
+                Color: {{selectedColors}}<br>
                 Status: {{status}}<br>
             </div>
            

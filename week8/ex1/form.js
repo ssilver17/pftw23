@@ -7,7 +7,16 @@ createApp({
         lastName: "",
         street: "",
         state: "MN",
-        colors: [],
+        selectedColors: [],
+        colors: [
+            {name: "White", value: "white"},
+            {name: "Beige", value: "beige"},
+            {name: "Fawn", value: "fawn"},
+            {name: "Brown", value: "brown"},
+            {name: "Black", value: "black"},
+            {name: "Gray", value: "gray"},
+            {name: "Silver", value: "silver"},
+        ],
         status: "",
     }
   }
