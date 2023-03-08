@@ -6,7 +6,7 @@ createApp({
         firstName: "",
         lastName: "",
         street: "",
-        state: "MN",
+        state: "",
         selectedColors: [],
         colors: [
             {name: "White", value: "white"},
