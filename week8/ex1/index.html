@@ -5,11 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="main.css">
     <title>Form</title>
 </head>
 <body>
-
-
+    <div id="myApp">
+        <form>
+            <fieldset>
+                <legend>Fan Club Registration</legend>
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" v-model="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" v-model="lastName">
+                </div>
+                <div>
+                    <label for="street">Street Address</label>
+                    <input id="street" v-model="street">
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input id="state" v-model="state">    
+                </div>
+                <div class="alpaca-color">
+                    <p>Favorite Alpaca Colors</p>
+                    <div>
+                        <label for=""> Color
+                            <input type="checkbox"
+                            name="" id="">
+                        </label>
+                    </div>
+                </div>
+                <div class="alpaca-status">
+                    <label>Alpaca Status</label>
+                    <textarea name="" id="" cols="30" rows="10"
+                    v-model="status">
+                    </textarea>
+                </div>
+            </fieldset>
+            <div class="output">
+                <h3>Output</h3>
+                First Name: {{firstName}}<br>
+                Last Name: {{lastName}}<br>
+                Street: {{street}}<br>
+                State: {{state}}<br>
+                Status: {{status}}<br>
+            </div>
+           
+        </form>
+    </div>
     <script src="form.js"></script>
 </body>
 </html>   
