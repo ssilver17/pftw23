@@ -1,0 +1,42 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+    width: 100px;
+    max-width: 300px;
+    margin: 0 auto;
+    
+}
+
+div {
+    margin: 10px 0;
+    display: flexbox;
+}
+
+div.alpaca-status div.alpaca-color {
+    flex-direction: column;
+}
+
+div label {
+    margin-right: 10px;
+}
+
+div input, div select {
+    flex-grow: 1;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.output {
+    width: 330px;
+    background-color: rgba(240, 159, 19, 0.73);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(33, 32, 32);
+    line-height: 2rem;
+   
+}
