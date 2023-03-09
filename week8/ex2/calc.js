@@ -12,23 +12,25 @@ createApp({
   },
   methods: {
     calculate: (num1, num2) => {
-      switch (createApp.operation) {
+      switch (this.operation) {
         case 'add':
-          createApp.total = num1 + num2;
+          this.total = num1 + num2;
           break;
         case 'subtract':
-          createApp.total = num1 - num2;
+          this.total = num1 - num2;
           break;
         case 'multiply':  
-          createApp.total = num1 * num2;
+          this.total = num1 * num2;
           break;
         case 'divide':
-          createApp.total = num1 / num2;
+          this.total = num1 / num2;
           break;
         default: 
           window.alert('unexpected operator');
           break;
       }
+      this.firstNum = this.secondNum =null;
+      
     }
   }
 }).mount('#myApp')
