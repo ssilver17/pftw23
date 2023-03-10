@@ -11,26 +11,25 @@ createApp({
   
   },
   methods: {
-    calculate: (num1, num2) => {
-      switch (this.operation) {
-        case 'add':
+    calculate (num1, num2) {
+      switch(this.operation) {
+        case "add":
           this.total = num1 + num2;
           break;
-        case 'subtract':
+        case "subtract":
           this.total = num1 - num2;
           break;
-        case 'multiply':  
+        case "multiply":  
           this.total = num1 * num2;
           break;
-        case 'divide':
+        case "divide":
           this.total = num1 / num2;
           break;
         default: 
-          window.alert('unexpected operator');
+          window.alert("unexpected operator");
           break;
       }
-      this.firstNum = this.secondNum =null;
-      
+        firstNum = secondNum = null;
     }
   }
 }).mount('#myApp')

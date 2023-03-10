@@ -23,17 +23,12 @@
                 </select>
                 <input v-model.number="secondNum" type="number" placeholder="second number">
             </div>
-            <button v-on:click="calculate(fisrtNum, secondNum)" type="button">Calculate</button>
+            <button v-on:click="calculate(firstNum, secondNum)" type="button">Calculate</button>
         </form>
         <div>
-            Operation: {{operation}}<br>
             Total: <strong>{{total}}</strong>
         </div>
-
-
     </div>
-    
-
     <script src="calc.js"></script>
 </body>
 </html>
