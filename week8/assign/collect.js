@@ -39,7 +39,7 @@ createApp({
             artist: "Abigail Lapell",
             yearReleased: "2019",
             genre: "Rock, Folk, Country"
-        }   
+        },   
       ]
     }
   },
@@ -58,9 +58,9 @@ createApp({
       }
     },
     deleteAlbum (album) {
-      this.collection = this.collection.filter(collect => {
-        return collect !== album;
-      });
+      this.collection = this.collection.filter(collection => {
+        return collection !== album;
+      })
     }
   }
 }).mount("#myApp");
