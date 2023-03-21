@@ -39,7 +39,7 @@ createApp({
             artist: "Abigail Lapell",
             yearReleased: "2019",
             genre: "Rock, Folk, Country"
-        },   
+        }   
       ]
     }
   },
