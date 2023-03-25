@@ -6,13 +6,13 @@ console.log(props.animal);
 <template>
     <h1></h1>
      <div class="animal-row">
-      <h2>{{animal.commonName}}</h2>
-      <h3>{{animal.binomialName}}</h3>
-      <img v-bind:src="animal.image" v-bind:alt="animal.commonName"/>
-      <p>{{animal.order}}</p>
-      <p>{{animal.family}}</p>
-      <p>{{animal.genus}}</p>
-      <p>{{animal.species}}</p>
+      <h2>{{props.animal.commonName}}</h2>
+      <h3>{{props.animal.binomialName}}</h3>
+      <img v-bind:src="props.animal.image" v-bind:alt="props.animal.commonName" />
+      <p>{{props.animal.order}}</p>
+      <p>{{props.animal.family}}</p>
+      <p>{{props.animal.genus}}</p>
+      <p>{{props.animal.species}}</p>
     </div>
 </template>
 <style scoped>
