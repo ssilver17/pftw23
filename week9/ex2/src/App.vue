@@ -1,4 +1,6 @@
 <script setup>
+import AnimalRow from './components/AnimalRow.vue';
+const isWorking = true;
 const camelids = [
       {
         commonName: "Lama",
@@ -21,20 +23,13 @@ const camelids = [
         id: 1
       },
     ]
-
 </script>
 
 <template>
   <div class="container">
     <h1>Camelids</h1>
-    <div v-for="animal in camelids" v-bind:key="camelids.id" class="animal-row">
-      <h2>{{animal.commonName}}</h2>
-      <h3>{{animal.binomialName}}</h3>
-      <img v-bind:src="animal.image" v-bind:alt="animal.commonName"/>
-      
-    </div>
-  </div>
-  
+    <AnimalRow v-for="animal in camelids" key="animal.id"/>
+  </div> 
 </template>
 
 <style scoped>
@@ -43,18 +38,4 @@ const camelids = [
     margin: 20px auto 0;
     font-size: 18px;
   }
-
-  .container h1 {
-    text-align: center;
-  }
-
-  .container p {
-    font-size:12px;
-  }
-  .container .animal-row img {
-    max-width: 300px;
-    min-width: 300px;
-    display: block;
-  }
-  
 </style>
