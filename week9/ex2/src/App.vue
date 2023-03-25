@@ -29,8 +29,9 @@ const camelids = [
     <h1>Camelids</h1>
     <div v-for="animal in camelids" v-bind:key="camelids.id" class="animal-row">
       <h2>{{animal.commonName}}</h2>
+      <h3>{{animal.binomialName}}</h3>
       <img v-bind:src="animal.image" v-bind:alt="animal.commonName"/>
-      <p>{{animal.binomialName}}</p>
+      
     </div>
   </div>
   
