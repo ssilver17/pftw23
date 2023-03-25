@@ -1,7 +1,6 @@
 <script setup>
 const props = defineProps(["animal"]);
-console.log(props.animal);
-    
+console.log(props.animal);   
 </script>
 <template>
     <h1></h1>
@@ -28,5 +27,4 @@ console.log(props.animal);
     min-width: 300px;
     display: block;
   }
-
 </style>
