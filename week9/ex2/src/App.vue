@@ -28,7 +28,7 @@ const camelids = [
 <template>
   <div class="container">
     <h1>Camelids</h1>
-    <AnimalRow v-for="animal in camelids" key="animal.id"/>
+    <AnimalRow v-for="animal in camelids" key="animal.id" v-bind:animal="animal" />
   </div> 
 </template>
 

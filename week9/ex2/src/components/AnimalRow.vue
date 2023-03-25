@@ -1,10 +1,10 @@
 <script setup>
-    const animal = {
-        name: "test",
-        image: "test"
-    }
+const props = defineProps(["animal"]);
+console.log(props.animal);
+    
 </script>
 <template>
+    <h1></h1>
      <div class="animal-row">
       <h2>{{animal.commonName}}</h2>
       <h3>{{animal.binomialName}}</h3>
