@@ -1,12 +1,37 @@
 <script setup>
-const isWorking = true;
+const camelids = [
+      {
+        commonName: "Lama",
+        binomialName: "Lama glama",
+        order: "Artiodactyla",
+        family: "Camelidae",
+        genus: "Lama",
+        species: "L. glama",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Llama_lying_down.jpg/220px-Llama_lying_down.jpg",
+        id: 0
+        },
+      {
+        commonName: "Alpaca",
+        binomialName: "Vicugna pacos",
+        order: "Artiodactyla",
+        family: "Camelidae",
+        genus: "Vicugna",
+        species: "V. pacos",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alpaca_%2831562329701%29.jpg/440px-Alpaca_%2831562329701%29.jpg",
+        id: 1
+      },
+    ]
 
 </script>
 
 <template>
   <div class="container">
-    <h1>My first compiled Vue app</h1>
-    <p v-if="isWorking">It is working</p>
+    <h1>Camelids</h1>
+    <div v-for="animal in camelids" v-bind:key="camelids.id" class="animal-row">
+      <h2>{{animal.commonName}}</h2>
+      <img v-bind:src="animal.image" v-bind:alt="animal.commonName"/>
+      <p>{{animal.binomialName}}</p>
+    </div>
   </div>
   
 </template>
@@ -15,11 +40,20 @@ const isWorking = true;
   .container {
     width: 600px;
     margin: 20px auto 0;
-    text-align: center;
     font-size: 18px;
   }
+
+  .container h1 {
+    text-align: center;
+  }
+
   .container p {
-    font-size: 30px;
+    font-size:12px;
+  }
+  .container .animal-row img {
+    max-width: 300px;
+    min-width: 300px;
+    display: block;
   }
   
 </style>
