@@ -1,6 +1,6 @@
 <script setup>
-import {reactive} from 'vue';
-
+import {reactive} from "vue";
+import ItemRow from "./components/ItemRow.vue";
 
 const collection = [
 {
@@ -57,12 +57,11 @@ const state = reactive({collection: collection, newAlbumObj: newAlbumObj});
             <th>Remove</th>
         </thead>
         <tbody>
-            <tr v-for="(object, idx) in state.collection" v-bind:key="idx" v-bind:class="{odd: idx %2 !==0, blues: object.genre.toLowerCase().includes('blues')}">
-                <td>{{object.title}}</td>
-                <td>{{object.artist}}</td>
-                <td>{{object.yearReleased}}</td>
-                <td>{{object.genre}}</td>
-                <td><button type="button" v-on:click="deleteAlbum (album)">Delete</button></td>
+            <tr>
+              <td>
+                <ItemRow v-for="(album, index) in state.collection" v-bind:key="index " 
+                v-bind:item="album" />
+              </td>
             </tr>
         </tbody>
         </table>
