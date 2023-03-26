@@ -7,32 +7,40 @@ const collection = [
             title: "Pastel Blues",
             artist: "Nina Simone",
             yearReleased: "1965",
-            genre: "Blues, Jazz"
+            genre: "Blues, Jazz",
+            id:1
         }, {
             title: "Takin' My Time",
             artist: "Bonnie Raitt",
             yearReleased: "1973",
-            genre: "Blues, Jazz, Rythem and Blues"
+            genre: "Blues, Jazz, Rythem and Blues",
+            id:2
         }, {
             title: "Nighthawks at the Diner",
             artist: "Tom Waits",
             yearReleased: "1975",
-            genre: "Jazz, Rock, Spoken Word"
+            genre: "Jazz, Rock, Spoken Word",
+            id:3
         }, {
             title: "Closing Time",
             artist: "Tom Waits",
             yearReleased: "1963",
-            genre: "Blues, Jazz, Rock, Folk"
+            genre: "Blues, Jazz, Rock, Folk",
+            id:4
+
         }, {
             title: "Le Tigre",
             artist: "Le Tigre",
             yearReleased: "1999",
-            genre: "Electroclash, Dance"
+            genre: "Electroclash, Dance",
+            id:5
+
         }, {
             title: "Getaway",
             artist: "Abigail Lapell",
             yearReleased: "2019",
-            genre: "Rock, Folk, Country"
+            genre: "Rock, Folk, Country",
+            id:6
         }   
 ];
 const newAlbumObj = {
@@ -48,13 +56,20 @@ function submitHandler () {
         title: state.newAlbumObj.title,
         artist: state.newAlbumObj.artist,
         yearReleased: state.newAlbumObj.yearReleased,
-        genre: state.newAlbumObj.genre
+        genre: state.newAlbumObj.genre,
+        id: state.collection.length + 1,
       });
       state.newAlbumObj.title = "";
       state.newAlbumObj.artist = "";
       state.newAlbumObj.yearReleased = "";
       state.newAlbumObj.genre = "";
     };
+    function handleDelete(itemToDelete) {
+      console.log(itemToDelete.id, itemToDelete.name);
+      state.collection = state.collection.filter((itemToCheck) => {
+        return itemToDelete !== itemToCheck
+      });
+    }
 
 </script>
 
@@ -74,7 +89,8 @@ function submitHandler () {
             <tr>
               <td>
                 <ItemRow v-for="(album, index) in state.collection" v-bind:key="index " 
-                v-bind:item="album" />
+                v-bind:item="album" 
+                v-on:delete-item="handleDelete"/>
               </td>
             </tr>
         </tbody>
