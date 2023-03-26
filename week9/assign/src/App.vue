@@ -42,6 +42,20 @@ const newAlbumObj = {
   genre: ""
 };
 const state = reactive({collection: collection, newAlbumObj: newAlbumObj});
+function submitHandler () {
+      console.log("submitted");
+      state.collection.push({
+        title: state.newAlbumObj.title,
+        artist: state.newAlbumObj.artist,
+        yearReleased: state.newAlbumObj.yearReleased,
+        genre: state.newAlbumObj.genre
+      });
+      state.newAlbumObj.title = "";
+      state.newAlbumObj.artist = "";
+      state.newAlbumObj.yearReleased = "";
+      state.newAlbumObj.genre = "";
+    };
+
 </script>
 
 <template>
