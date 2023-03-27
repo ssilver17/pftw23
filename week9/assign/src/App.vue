@@ -78,7 +78,7 @@ function submitHandler () {
     <h1>Vinyl Collection</h1>
     <p>Blues albums are noted with blue text.</p>
     <table>
-            <thead>
+        <thead>
             <th>Title</th>
             <th>Artist</th>
             <th>Year Released</th>
@@ -88,36 +88,38 @@ function submitHandler () {
         <tbody>
             <tr>
               <td>
-                <ItemRow v-for="(album, index) in state.collection" v-bind:key="index " 
+                <ItemRow 
+                v-for="(album, index) in state.collection" v-bind:key="index" 
                 v-bind:item="album" 
+                v-bind:index="index"
                 v-on:delete-item="handleDelete"/>
               </td>
             </tr>
         </tbody>
-        </table>
+    </table>
         
-        <form v-on:submit.prevent="submitHandler">
-            <fieldset>
-                <legend>Add an album to the collection</legend>
-                <div>
-                    <label for="title">Title</label>
-                    <input id="title" type="text" v-model="newAlbumObj.title">
-                </div>
-                <div>
-                    <label for="artist">Artist</label>
-                    <input id="artist" type="text" v-model="newAlbumObj.artist">
-                </div>
-                <div>
-                    <label for="yearReleased">Year Released</label>
-                    <input id="yearReleased" type="date" v-model="newAlbumObj.yearReleased">
-                </div>
-                <div>
-                    <label for="genre">Genre</label>
-                    <input id="genre" type="text" v-model="newAlbumObj.genre">
-                </div>
-                <button type="submit">Submit</button>
+    <form v-on:submit.prevent="submitHandler">
+        <fieldset>
+            <legend>Add an album to the collection</legend>
+            <div>
+                <label for="title">Title</label>
+                <input id="title" type="text" v-model="newAlbumObj.title">
+            </div>
+            <div>
+                <label for="artist">Artist</label>
+                <input id="artist" type="text" v-model="newAlbumObj.artist">
+            </div>
+            <div>
+                <label for="yearReleased">Year Released</label>
+                <input id="yearReleased" type="date" v-model="newAlbumObj.yearReleased">
+            </div>
+            <div>
+                <label for="genre">Genre</label>
+                <input id="genre" type="text" v-model="newAlbumObj.genre">
+            </div>
+            <button type="submit">Submit</button>
         </fieldset>
-        </form>
+    </form>
   </div>
 
 </template>
@@ -145,11 +147,6 @@ function submitHandler () {
     color:rgb(219, 19, 119)
   }
 
-  table, thead, th, tbody, tr, td {
-    border: none;
-    padding: 20px;
-    text-align: center;
-  }
 
   thead {
     color: rgb(2, 44, 48);
@@ -172,23 +169,30 @@ function submitHandler () {
     background-color: rgb(85, 178, 231);
     color: aliceblue;
   }
+  
+  table, thead, th, tbody, tr, td {
+    border: none;
+    padding: 20px;
+    text-align: center;
+  }
 
   form {
     background-color: rgba(234, 187, 33, 0.919);
     padding: 10px 20px;
     border-radius: 20px;
     border: 1px solid rgb(33, 32, 32);
-    margin-left: 20px;
+    max-width: 400px;
     margin-top: 50px;
   }
 
   legend {
     font-weight: bold;
+    text-align: center;
   }
 
   fieldset {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: none;
