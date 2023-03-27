@@ -175,7 +175,7 @@ function submitHandler () {
     padding: 20px;
     text-align: center;
   }
-
+  
   form {
     background-color: rgba(234, 187, 33, 0.919);
     padding: 10px 20px;
