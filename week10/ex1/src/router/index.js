@@ -17,9 +17,9 @@ const router = createRouter({
       component: Alpaca
     },
     {
-      path: './llama',
+      path: '/llama',
       name: 'llama',
-      component: 'Llama'
+      component: Llama
     }
   ]
 })
