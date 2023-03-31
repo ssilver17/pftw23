@@ -10,8 +10,9 @@ const song = MusicList.find(song => {
 
 <template>
     <div class="song-detail" :class="{
-        rising: song.rank > song.position.positionLastWeek, falling: song.rank < song.positionLastWeek, holding: song.rank === song.position.positionLastWeek }">
-        <h1>{{ song.position }}</h1>
+        rising: song.rank < song.position.positionLastWeek, falling: song.rank > song.position.positionLastWeek, holding: song.rank === song.position.positionLastWeek}">
+        <h1>#{{ song.rank }}</h1>
+        <h2 class="last-week"> Last week at #{{ song.position.positionLastWeek }}</h2>
         <h2>{{ song.title }}</h2>
         <img :src="song.cover" :alt="song.title" />
         <p>Artist: {{ song.artist }}</p>
@@ -20,15 +21,25 @@ const song = MusicList.find(song => {
 </template>
 
 <style scoped>
-.song-detail .rising {
-    border: 1px solid rgb(242, 15, 185);
+
+h1 {
+    font-weight: 900;
+    text-decoration: underline;
 }
 
-.song-detail .falling {
-    border: 1px solid rgb(5, 36, 90);
+.last-week {
+    font-size: 14px;
+}
+.song-detail.rising h1 {
+    color: rgb(15, 242, 23);
+    
 }
 
-.song-detail .holding {
-    border: 1px dashed orange;
+.song-detail.falling  h1 {
+    color: rgb(219, 9, 9);
+}
+
+.song-detail.holding h1 {
+    color: orange;
 }
 </style>

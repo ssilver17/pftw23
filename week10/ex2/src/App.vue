@@ -4,13 +4,13 @@ import {RouterView, RouterLink} from "vue-router"
 
 <template>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
-    
-  </nav>
-
-  <RouterView />
+    <RouterLink to="/">Home</RouterLink></nav>
+    <RouterView />
 </template>
 
-<style scoped>
-
+<style>
+  a {
+    color: rgb(226, 21, 171);
+    font-weight: 600;
+}
 </style>
