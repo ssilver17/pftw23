@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Pastel Blues",
+        "image": ,
+        "artist": "Nina Simone",
+        "yearReleased": "1965",
+        "genre": "Blues, Jazz",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "1"
+    }, {
+        "title": "Takin' My Time",
+        "image": ,
+        "artist": "Bonnie Raitt",
+        "yearReleased": "1973",
+        "genre": "Blues, Jazz, Rythem and Blues",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "2"
+    }, {
+        "title": "Nighthawks at the Diner",
+        "image": ,
+        "artist": "Tom Waits",
+        "yearReleased": "1975",
+        "genre": "Jazz, Rock, Spoken Word",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "3"
+    }, {
+        "title": "Closing Time",
+        "image": ,
+        "artist": "Tom Waits",
+        "yearReleased": "1963",
+        "genre": "Blues, Jazz, Rock, Folk",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "4"
+    }, {
+        "title": "Le Tigre",
+        "image": ,
+        "artist": "Le Tigre",
+        "yearReleased": "1999",
+        "genre": "Electroclash, Dance",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "5"
+    }, {
+        "title": "Getaway",
+        "image": ,
+        "artist": "Abigail Lapell",
+        "yearReleased": "2019",
+        "genre": "Rock, Folk, Country",
+        "description": "Em faceper sperum issit unt et ut aut ea dus, invel iusam harum dio ma est volori ullorrovit fuga. Ut facest, quodicabores escid ut eum eum",
+        "id": "6"
+    }   
+  ]
