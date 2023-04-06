@@ -4,7 +4,7 @@ defineProps(["id", "title", "image"]);
 </script>
 <template>
     <div class="album-card">
-        <img class="album-image" :src="`/covers/${image}`" :alt="title">
+        <img class="album-image" :src="`./covers/${image}`" :alt="title">
         <div class="footer">
             <RouterLink class="footer-link" :to="`/albums/${id}`">{{ title }}</RouterLink>
         </div>

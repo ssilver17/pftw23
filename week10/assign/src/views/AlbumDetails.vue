@@ -13,7 +13,7 @@ const albumDetails = albumData.find((album) => {
         <div>
             <RouterLink to="/albums">Back to collection</RouterLink>
             <h2>{{ albumDetails.title }}</h2>
-            <img :src="`/covers/${albumDetails.image}`" :alt="albumDetails.title" 
+            <img :src="`./covers/${albumDetails.image}`" :alt="albumDetails.title" 
             class="album-image"/>
             <div class="detail-text">
                 <h3>Artist:</h3>
