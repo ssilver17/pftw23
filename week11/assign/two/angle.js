@@ -9,9 +9,9 @@ function setup() {
 function redAngle() {
     strokeWeight(3);
     stroke(212, 29, 82);
-    for (var x = 1; x < 600; x +=5) {
-    line(x, 0, x, 235);
-    line(x, 0, x, 235);
+    for (var x = 0; x < 600; x +=5) {
+    line(100, 0, 500, 235);
+    line(x, 0, 600, 200);
     }
 }
 
