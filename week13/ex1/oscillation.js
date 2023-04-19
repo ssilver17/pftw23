@@ -14,8 +14,8 @@ function setup( ) {
 
 function draw() {
     translate(200, 200);
-    background(240, 29, 238, [50]);
-    fill(24, 8, 24, 50);
+    background(240, 29, 238);
+    fill(24, 8, 24, 20);
     stroke("#642163");
 
     var mySinVal = sin(pos);
