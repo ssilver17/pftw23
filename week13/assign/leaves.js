@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
     background(12, 31, 60);
-
+    moon();
     tree();
     randomSeed(99);
     for (var i = 0; i < width; i += 5) {
@@ -55,9 +55,19 @@ function dotA(x, y, s) {
     fill(255, 242, 99);
     noStroke();
     rotate(30); 
-    ellipse(1000, 800, amplified, 10);
+    ellipse(1000, 800, amplified, 5);
     pos = pos + inc;
     pop();
+}
+
+function moon() {
+    fill("#f8f3b9");
+    noStroke();
+    ellipse(1000, 100, 100, 100);
+
+    fill(12, 31, 60);
+    ellipse(980, 110, 100, 100);
+
 }
 
 
