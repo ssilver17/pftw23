@@ -28,7 +28,7 @@ function preload() {
 }
 function setup() {
     createCanvas(900, 1000);
-    background("#042152");
+    //background("#042152");
     noStroke(); 
     fill("#ffba10");
     noStroke();
@@ -58,6 +58,7 @@ function setup() {
 }
 
 function draw() {
+    background("#042152");
     if(gameState.numMatched === gameState.totalPairs) {
         fill("#042152");
         textSize(65);
