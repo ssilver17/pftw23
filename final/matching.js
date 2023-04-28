@@ -14,6 +14,14 @@ let cardFaceArray = [];
 let cardBack;
 let cardAnswerArray = [];
 
+let answerCard;
+let startingAX = 720;
+let startingAY = 180;
+let cardsA = [];
+const answerState = {
+
+};
+
 function preload() {
     cardBack = loadImage("images/cardback.jpg");
     cardFaceArray = [
@@ -57,22 +65,32 @@ function setup() {
         const face = cardFaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
-        cardFaceArray.splice(randomIdx, 0); //starting getting an error when I add a number after randomIdx
+        cardFaceArray.splice(randomIdx, 0); 
     }
     selectedFaces = shuffleArray(selectedFaces);
-    for(let j = 0; j< 4; j++) {
+    for(let j = 0; j< 4; j++) {         //question cards
         for(let i = 0; i < 3; i++) {   
             const faceImage = selectedFaces.pop();               
             cards.push(new Card(startingX, startingY, faceImage)); 
             startingX += 210;                       
     }
     startingY +=200;
-    startingX = 60;   //sets starting location for newrow                    
+    startingX = 60;   //sets starting location for new row              
     } 
+
+    for (let r = 0; r < 4; r++) {
+        for (let q = 0; q < 3; q++) {           //answer cards
+            cardsA.push(new AnswerCard(startingAX, startingAY));
+            startingAX += 160;
+        }
+        startingAY += 200;
+        startingAX = 720;   //sets starting location for new row              
+    
+    }
 }
 
 function draw() {
-    background("#f5cbd1");
+    //background("#f5cbd1");    //why do answer cards disappear when uncommented out?
     noStroke(); 
     fill("#611e28");
     noStroke();
@@ -141,6 +159,11 @@ function mousePressed() {
             }, 1000)
         }
     }
+    for (let v = 0; v <cardsA.length; v++) {
+        if(cardsA[v].didHit(mouseX, mouseY)) {
+            console.log("hit");
+        }
+    }
 }
 
 class Card {
@@ -188,18 +211,28 @@ class Card {
   
 }
 
-class CardB {
-    constructor(x, y, cardAnswerImg) {          //answer card  
+class AnswerCard {          //answer card
+    constructor (x, y) {
         this.x = x;
         this.y = y;
         this.width = 100;
         this.height = 150;
-        this.face = DOWN;
-        this.cardFaceImg = cardAnswerImg;
-        this.isMatch = false;
         this.show();
     }
-}    
+    show () {
+        fill("#611e28");
+        rect(this.x, this.y, this.width, this.height)
+    }
+
+    didHit (mouseX, mouseY) {
+        if (mouseX >= this.x && mouseX <= this.x + this.width &&
+            mouseY >= this.y && mouseY <= this.y + this.height) {
+                return true;
+            } else {
+                return false;
+            }
+    }
+ }  
 
 function shuffleArray (array) {
     let counter = array.length;
