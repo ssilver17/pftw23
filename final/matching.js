@@ -4,7 +4,7 @@ let startingX = 60;
 let startingY = 180;
 let cards = [];
 const gameState = {
-    totalPairs: 8,
+    totalPairs: 12,
     flippedCards: [],
     numMatched: 0,
     attempts: 0,
@@ -17,29 +17,33 @@ let cardAnswerArray = [];
 function preload() {
     cardBack = loadImage("images/cardback.jpg");
     cardFaceArray = [
+        loadImage("images/q-eight.jpg"),
+        loadImage("images/q-eleven.jpg"),
+        loadImage("images/q-fifteen.jpg"),
+        loadImage("images/q-five.jpg"),
+        loadImage("images/q-four.jpg"),
+        loadImage("images/q-fourteen.jpg"),
+        loadImage("images/q-nine.jpg"),
         loadImage("images/q-one.jpg"),
-        loadImage("images/bird02.jpg"),
-        loadImage("images/bird03.jpg"),
-        loadImage("images/bird04.jpg"),
-        loadImage("images/bird05.jpg"),
-        loadImage("images/bird06.jpg"),
-        loadImage("images/bird07.jpg"),
-        loadImage("images/bird09.jpg")
+        loadImage("images/q-seven.jpg"),
+        loadImage("images/q-six.jpg"),
+        loadImage("images/q-ten.jpg"),
+        loadImage("images/q-two.jpg"),
     ]
 
     //cardAnswerArray = [
         //loadImage("images/1.png"),
         //loadImage("images/2.png"),
-        //loadImage("images/3.png"),
         //loadImage("images/4.png"),
         //loadImage("images/5.png"),
         //loadImage("images/6.png"),
         //loadImage("images/7.png"),
         //loadImage("images/8.png"),
         //loadImage("images/9.png"),
-        //loadImage("images/10.png"),
+        //loadImage("images10.png"),
         //loadImage("images/11.png"),
-        //loadImage("images/12.png"),
+        //loadImage("images/14.png"),
+        //loadImage("images/15.png"),
 
     //]
 }
@@ -70,7 +74,7 @@ function setup() {
 function draw() {
     background("#f5cbd1");
     noStroke(); 
-    fill("#f57a8d");
+    fill("#611e28");
     noStroke();
     quad(0, 0, 546, 0, 621, 125, 0, 125);   //header
     fill("#f57a8d");
@@ -80,7 +84,7 @@ function draw() {
     quad(814, 0, 1200, 0, 1200, 125, 889, 125);     //matches
 
     if(gameState.numMatched === gameState.totalPairs) {
-        fill("#042152");
+        fill("#611e28");
         textSize(65);
         text("YOU WIN!", 90, 85);
         noLoop();
@@ -94,10 +98,13 @@ function draw() {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill("#042152");
+    fill("#611e28");
     textSize(30);
     text("attempts " + gameState.attempts, 650, 75);
-    text("matches " + gameState.numMatched, 900, 75)
+    text("matches " + gameState.numMatched, 900, 75);
+    fill("#f57a8d");
+    textSize(60);
+    text("Let's do math!", 100, 85)
 
     
 }
