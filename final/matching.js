@@ -56,30 +56,38 @@ function preload() {
 }
 function setup() {
     createCanvas(1200, 1000);
-    
+    background("#f5cbd1"); 
 
-    let selectedFaces = [];
-    for(let z = 0; z < 8; z++) {
-        const randomIdx = floor(random(cardFaceArray.length));
-        const face = cardFaceArray[randomIdx];
+    let selectedFaces = [];     //randomizes question cards
+    for(let z = 0; z < 12; z++) {       //loop thru number of matches
+        const randomIdx = floor(random(cardFaceArray.length));  //choses random whole number 
+        const face = cardFaceArray[randomIdx];  //choses random face from array
         selectedFaces.push(face);
-        selectedFaces.push(face);
-        cardFaceArray.splice(randomIdx, 0); 
+        //selectedFaces.push(face);  //probably only need one of these
+        cardFaceArray.splice(randomIdx, 0); //removes the used card 
     }
-    selectedFaces = shuffleArray(selectedFaces);
+    selectedFaces = shuffleArray(selectedFaces);  //places random images
+
     for(let j = 0; j< 4; j++) {         //question cards
         for(let i = 0; i < 3; i++) {   
-            const faceImage = selectedFaces.pop();               
+            const faceImage = selectedFaces.pop();  //pop returns last item removed          
             cards.push(new Card(startingX, startingY, faceImage)); 
             startingX += 210;                       
-    }
+        }
     startingY +=200;
     startingX = 60;   //sets starting location for new row              
     } 
 
-    for (let r = 0; r < 4; r++) {
-        for (let q = 0; q < 3; q++) {           //answer cards
-            cardsA.push(new AnswerCard(startingAX, startingAY, cardAnswerArray[0]));
+    let selectedAnswers = [];
+    for (let s = 0; s < 12; s++) {
+        const randomIdx = floor(random(cardAnswerArray.length));
+        const answerFace = cardAnswerArray[randomIdx];
+        selectedAnswers.push(answerFace);
+    }
+    for (let r = 0; r < 4; r++) {           //answer cards
+        for (let q = 0; q < 3; q++) {   
+            const answerFaceImage = selectedAnswers.pop();      
+            cardsA.push(new AnswerCard(startingAX, startingAY, answerFaceImage));
             startingAX += 160;
         }
         startingAY += 200;
@@ -238,12 +246,11 @@ class AnswerCard {          //answer card
 function shuffleArray (array) {
     let counter = array.length;
     while (counter > 0) {
-        //pick random index
-        const idx = Math.floor(Math.random() * counter);
-        //decrese counter by 1 (decrement)
-        counter--;
-        //swap the last element with it
-        const temp = array[counter];
+        const idx = Math.floor(Math.random() * counter);  //pick random index
+        
+        counter--;  //decrese counter by 1 (decrement)
+        
+        const temp = array[counter];  //swap the last element with it
         array[counter] = array[idx];
         array[idx] = temp;
     }
