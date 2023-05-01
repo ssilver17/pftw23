@@ -139,8 +139,7 @@ function mousePressed() {
         return;
     }
     for(let k = 0; k < cards.length; k++) {     
-        //first check flip cards length, then
-        //we can trigger the flip
+        //limit # of cards flipped to 2
         if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
             console.log("flipped", cards[k]);
             gameState.flippedCards.push(cards[k]);
@@ -148,19 +147,17 @@ function mousePressed() {
     }
     if (gameState.flippedCards.length === 2) {
         gameState.attempts++;
-        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardAnswerImg) {  //do cards match
             //cards match. time to score
             //mark cards as matched
             gameState.flippedCards[0].isMatch = true;
             gameState.flippedCards[1].isMatch = true;
-            //empty flipped cards array
-            gameState.flippedCards.length = 0;
-            //increment the score
-            gameState.numMatched++;
+            gameState.flippedCards.length = 0;  //empty flipped cards array
+            gameState.numMatched++;  //increment the score
             loop();
         } else {
             gameState.waiting = true;
-            const loopTimeout = window.setTimeout(() => {
+            const loopTimeout = window.setTimeout(() => {  //time betwen card flips
                 loop();
                 window.clearTimeout(loopTimeout);
             }, 1000)
