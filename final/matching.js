@@ -166,7 +166,7 @@ function mousePressed() {
             }, 1000)
         }
     }
-    for (let v = 0; v <cardsA.length; v++) {
+    for (let v = 0; v <cardsA.length; v++) {    //answer card clicked on
         if(cardsA[v].didHit(mouseX, mouseY)) {
             console.log("hit");
         }
@@ -186,7 +186,7 @@ class Card {
     }
 
     show () {
-        if(this.face === UP || this.isMatch) {
+        if(this.face === UP || this.isMatch) {      //checking for card face up or matched
             //fill("#aaa");
             square(this.x, this.y, this.width);
             image(this.cardFaceImg, this.x, this.y, this.width, this.height);
