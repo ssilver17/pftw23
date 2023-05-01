@@ -36,7 +36,7 @@ function preload() {
         loadImage("images/q-seven.jpg"),
         loadImage("images/q-six.jpg"),
         loadImage("images/q-ten.jpg"),
-        loadImage("images/q-two.jpg") 
+        loadImage("images/q-two.jpg"),
     ]
 
     cardAnswerArray = [
@@ -48,11 +48,10 @@ function preload() {
         loadImage("images/7.png"),
         loadImage("images/8.png"),
         loadImage("images/9.png"),
-        loadImage("images10.png"),
+        loadImage("images/10.png"),
         loadImage("images/11.png"),
         loadImage("images/14.png"),
         loadImage("images/15.png"),
-
     ]
 }
 function setup() {
@@ -222,7 +221,8 @@ class AnswerCard {          //answer card
     }
     show () {
         fill("#611e28");
-        rect(this.x, this.y, this.width, this.height)
+        rect(this.x, this.y, this.width, this.height);
+        image(this.cardAnswerImg, this.x, this.y);
     }
 
     didHit (mouseX, mouseY) {
