@@ -12,8 +12,8 @@ const gameState = {
 };
 let cardFaceArray = [];
 let cardBack;
-let cardAnswerArray = [];
 
+let cardAnswerArray = [];
 let answerCard;
 let startingAX = 720;
 let startingAY = 180;
@@ -36,24 +36,24 @@ function preload() {
         loadImage("images/q-seven.jpg"),
         loadImage("images/q-six.jpg"),
         loadImage("images/q-ten.jpg"),
-        loadImage("images/q-two.jpg"),
+        loadImage("images/q-two.jpg") 
     ]
 
-    //cardAnswerArray = [
-        //loadImage("images/1.png"),
-        //loadImage("images/2.png"),
-        //loadImage("images/4.png"),
-        //loadImage("images/5.png"),
-        //loadImage("images/6.png"),
-        //loadImage("images/7.png"),
-        //loadImage("images/8.png"),
-        //loadImage("images/9.png"),
-        //loadImage("images10.png"),
-        //loadImage("images/11.png"),
-        //loadImage("images/14.png"),
-        //loadImage("images/15.png"),
+    cardAnswerArray = [
+        loadImage("images/1.png"),
+        loadImage("images/2.png"),
+        loadImage("images/4.png"),
+        loadImage("images/5.png"),
+        loadImage("images/6.png"),
+        loadImage("images/7.png"),
+        loadImage("images/8.png"),
+        loadImage("images/9.png"),
+        loadImage("images10.png"),
+        loadImage("images/11.png"),
+        loadImage("images/14.png"),
+        loadImage("images/15.png"),
 
-    //]
+    ]
 }
 function setup() {
     createCanvas(1200, 1000);
@@ -80,7 +80,7 @@ function setup() {
 
     for (let r = 0; r < 4; r++) {
         for (let q = 0; q < 3; q++) {           //answer cards
-            cardsA.push(new AnswerCard(startingAX, startingAY));
+            cardsA.push(new AnswerCard(startingAX, startingAY, cardAnswerArray[0]));
             startingAX += 160;
         }
         startingAY += 200;
@@ -212,11 +212,12 @@ class Card {
 }
 
 class AnswerCard {          //answer card
-    constructor (x, y) {
+    constructor (x, y, cardAnswerImg) {
         this.x = x;
         this.y = y;
         this.width = 100;
         this.height = 150;
+        this.cardAnswerImg = cardAnswerImg;
         this.show();
     }
     show () {
