@@ -25,18 +25,18 @@ const answerState = {
 function preload() {
     cardBack = loadImage("images/cardback.jpg");
     cardFaceArray = [
-        loadImage("images/q-eight.jpg"),
-        loadImage("images/q-eleven.jpg"),
-        loadImage("images/q-fifteen.jpg"),
-        loadImage("images/q-five.jpg"),
-        loadImage("images/q-four.jpg"),
-        loadImage("images/q-fourteen.jpg"),
-        loadImage("images/q-nine.jpg"),
         loadImage("images/q-one.jpg"),
-        loadImage("images/q-seven.jpg"),
-        loadImage("images/q-six.jpg"),
-        loadImage("images/q-ten.jpg"),
         loadImage("images/q-two.jpg"),
+        loadImage("images/q-four.jpg"),
+        loadImage("images/q-five.jpg"),
+        loadImage("images/q-six.jpg"),
+        loadImage("images/q-seven.jpg"),
+        loadImage("images/q-eight.jpg"),
+        loadImage("images/q-nine.jpg"),
+        loadImage("images/q-ten.jpg"),
+        loadImage("images/q-eleven.jpg"),
+        loadImage("images/q-fourteen.jpg"),
+        loadImage("images/q-fifteen.jpg"),
     ]
 
     cardAnswerArray = [
@@ -65,7 +65,7 @@ function setup() {
         selectedFaces.push(face);
         cardFaceArray.splice(randomIdx, 0); //removes the used card 
     }
-    selectedFaces = shuffleArray(selectedFaces);  //places random images
+    //selectedFaces = shuffleArray(selectedFaces);  //places random images
 
     for(let j = 0; j< 4; j++) {         //question cards
         for(let i = 0; i < 3; i++) {   
@@ -96,7 +96,6 @@ function setup() {
 }
 
 function draw() {
-    //background("#f5cbd1");    //why do answer cards disappear when uncommented out?
     noStroke(); 
     fill("#611e28");
     noStroke();
@@ -239,16 +238,16 @@ class AnswerCard {          //answer card
     }
  }  
 
-function shuffleArray (array) {
-    let counter = array.length;
-    while (counter > 0) {
-        const idx = Math.floor(Math.random() * counter);  //pick random index
+// function shuffleArray (array) {
+//     let counter = array.length;
+//     while (counter > 0) {
+//         const idx = Math.floor(Math.random() * counter);  //pick random index
         
-        counter--;  //decrese counter by 1 (decrement)
+//         counter--;  //decrese counter by 1 (decrement)
         
-        const temp = array[counter];  //swap the last element with it
-        array[counter] = array[idx];
-        array[idx] = temp;
-    }
-    return array;
-}
+//         const temp = array[counter];  //swap the last element with it
+//         array[counter] = array[idx];
+//         array[idx] = temp;
+//     }
+//     return array;
+// }
