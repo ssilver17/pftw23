@@ -18,9 +18,7 @@ let answerCard;
 let startingAX = 720;
 let startingAY = 180;
 let cardsA = [];
-const answerState = {
 
-};
 
 function preload() {
     cardBack = loadImage("images/cardback.jpg");
@@ -138,29 +136,29 @@ function mousePressed() {
     }
     for(let k = 0; k < cards.length; k++) {     
         //limit # of cards flipped to 2
-        if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
+        if(gameState.flippedCards.length < 1 && cards[k].didHit(mouseX, mouseY)) {
             console.log("flipped", cards[k]);
             gameState.flippedCards.push(cards[k]);
         }
     }
-    if (gameState.flippedCards.length === 2) {
-        gameState.attempts++;
-        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardAnswerImg) {  //do cards match
-            //cards match. time to score
-            //mark cards as matched
-            gameState.flippedCards[0].isMatch = true;
-            gameState.flippedCards[1].isMatch = true;
-            gameState.flippedCards.length = 0;  //empty flipped cards array
-            gameState.numMatched++;  //increment the score
-            loop();
-        } else {
-            gameState.waiting = true;
-            const loopTimeout = window.setTimeout(() => {  //time betwen card flips
-                loop();
-                window.clearTimeout(loopTimeout);
-            }, 1000)
-        }
-    }
+    // if (gameState.flippedCards.length === 2) {
+    //     gameState.attempts++;
+    //     if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardAnswerImg) {  //do cards match
+    //         //cards match. time to score
+    //         //mark cards as matched
+    //         gameState.flippedCards[0].isMatch = true;
+    //         gameState.flippedCards[1].isMatch = true;
+    //         gameState.flippedCards.length = 0;  //empty flipped cards array
+    //         gameState.numMatched++;  //increment the score
+    //         loop();
+    //     } else {
+    //         gameState.waiting = true;
+    //         const loopTimeout = window.setTimeout(() => {  //time betwen card flips
+    //             loop();
+    //             window.clearTimeout(loopTimeout);
+    //         }, 1000)
+    //     }
+    // }
     for (let v = 0; v <cardsA.length; v++) {    //answer card clicked on
         if(cardsA[v].didHit(mouseX, mouseY)) {
             console.log("hit");
