@@ -25,18 +25,18 @@ const answerState = {
 function preload() {
     cardBack = loadImage("images/cardback.jpg");
     cardFaceArray = [
+        loadImage("images/q-one.jpg"),
+        loadImage("images/q-two.jpg"),
+        loadImage("images/q-four.jpg"),
+        loadImage("images/q-five.jpg"),
+        loadImage("images/q-six.jpg"),
+        loadImage("images/q-ten.jpg"),
         loadImage("images/q-eight.jpg"),
         loadImage("images/q-eleven.jpg"),
         loadImage("images/q-fifteen.jpg"),
-        loadImage("images/q-five.jpg"),
-        loadImage("images/q-four.jpg"),
         loadImage("images/q-fourteen.jpg"),
         loadImage("images/q-nine.jpg"),
-        loadImage("images/q-one.jpg"),
         loadImage("images/q-seven.jpg"),
-        loadImage("images/q-six.jpg"),
-        loadImage("images/q-ten.jpg"),
-        loadImage("images/q-two.jpg"),
     ]
 
     cardAnswerArray = [
@@ -61,10 +61,9 @@ function setup() {
     let selectedFaces = [];     //randomizes question cards
     for(let z = 0; z < 12; z++) {       //loop thru number of matches
         const randomIdx = floor(random(cardFaceArray.length));  //choses random whole number 
-        const face = cardFaceArray[randomIdx];  //choses random face from array
+        const face = cardFaceArray[0];  //choses random face from array
         selectedFaces.push(face);
-        //selectedFaces.push(face);  //probably only need one of these
-        cardFaceArray.splice(randomIdx, 0); //removes the used card 
+        //cardFaceArray.splice(randomIdx, 0); //removes the used card 
     }
     selectedFaces = shuffleArray(selectedFaces);  //places random images
 
@@ -78,8 +77,8 @@ function setup() {
     startingX = 60;   //sets starting location for new row              
     } 
 
-    let selectedAnswers = [];
-    for (let s = 0; s < 12; s++) {
+    let selectedAnswers = [];   
+    for (let s = 0; s < 12; s++) {  //randomizes answer cards
         const randomIdx = floor(random(cardAnswerArray.length));
         const answerFace = cardAnswerArray[randomIdx];
         selectedAnswers.push(answerFace);
