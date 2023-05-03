@@ -17,12 +17,15 @@ let state = {
   // checkQuestionPhase: false,
   phase: SETUP,
   numMatches: 0,
-  numPairs: 6,
+  numPairs: 8,
   currentQuestion: null,
   currentAnswer: null
 }
+let twinkle;  //sound
+
 let problems = [];
 function preload() {
+  twinkle = loadSound('twinkle.mp3');
   cardBack = loadImage("images/cardback.jpg")
   // make one array of problem objects
   // this example will error b/c there are no actual images to load
@@ -58,11 +61,16 @@ function preload() {
       answerImage: loadImage("images/7.png"),
       reference: 7
     },
-    //     {
-    //   questionImage: loadImage("images/q-8.png"),
-    //   answerImage: loadImage("images/8.png"),
-    //   reference: 8
-    // }
+        {
+      questionImage: loadImage("images/q-8.png"),
+      answerImage: loadImage("images/8.png"),
+      reference: 8
+    },
+        {
+      questionImage: loadImage("images/q-9.png"),
+      answerImage: loadImage("images/9.png"),
+      reference: 9
+    }
   ]
 }
 function setup() {
@@ -106,13 +114,6 @@ function setup() {
 }
 
 function draw() {
-    // noStroke(); 
-    // fill("#611e28");
-    // quad(0, 0, 546, 0, 621, 125, 0, 125);   //header
-    // fill("#f57a8d");
-    // quad(560, 0, 800, 0, 875, 125, 635, 125);   //attempts
-    // fill("#9a700a");
-    // quad(814, 0, 1200, 0, 1200, 125, 889, 125);     //matches
 
   // state.questionPhase = true;
   state.phase = QUESTION;
@@ -183,6 +184,7 @@ function checkMatch() {
     fill("#611e28");
     textSize(30);
     text("That's " + state.numMatches + " correct!", 720, 100);
+    twinkle.play();
     // good place to provide feedback for correct answer/ add sound here?
     console.log("successful attempt")
     state.currentQuestion = null;
