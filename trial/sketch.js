@@ -23,39 +23,39 @@ let state = {
 }
 let problems = [];
 function preload() {
-  cardBack = loadImage("cardback.jpg")
+  cardBack = loadImage("images/cardback.jpg")
   // make one array of problem objects
   // this example will error b/c there are no actual images to load
   console.log("preloading")
   problems = [
     {
-      questionImage: loadImage("q-1.png"),
-      answerImage: loadImage("1.png"),
+      questionImage: loadImage("images/q-1.png"),
+      answerImage: loadImage("images/1.png"),
       reference: 1
     },
         {
-      questionImage: loadImage("q-2.png"),
-      answerImage: loadImage("2.png"),
+      questionImage: loadImage("images/q-2.png"),
+      answerImage: loadImage("images/2.png"),
       reference: 2
     },
-        {
-      questionImage: loadImage("q-3.png"),
-      answerImage: loadImage("3.png"),
-      reference: 3
-    },
+    //     {
+    //   questionImage: loadImage("images/q-3.png"),
+    //   answerImage: loadImage("images/3.png"),
+    //   reference: 3
+    // },
     {
-      questionImage: loadImage("q-4.png"),
-      answerImage: loadImage("4.png"),
+      questionImage: loadImage("images/q-4.png"),
+      answerImage: loadImage("images/4.png"),
       reference: 4
     },
         {
-      questionImage: loadImage("q-5.png"),
-      answerImage: loadImage("5.png"),
+      questionImage: loadImage("images/q-5.png"),
+      answerImage: loadImage("images/5.png"),
       reference: 5
     },
         {
-      questionImage: loadImage("q-6.png"),
-      answerImage: loadImage("6.png"),
+      questionImage: loadImage("images/q-6.png"),
+      answerImage: loadImage("images/6.png"),
       reference: 6
     }
   ]
