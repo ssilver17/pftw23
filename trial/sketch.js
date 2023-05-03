@@ -68,7 +68,7 @@ function preload() {
 function setup() {
   console.log("setting up")
   createCanvas(1200, 1000);
-  background("#f5cbd1"); 
+  //background("#f5cbd1"); 
   // make question and answer arrays
   for (let i = 0; i < problems.length; i++) {
     questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) // we'll set X and Y later
@@ -116,7 +116,7 @@ function draw() {
 
   // state.questionPhase = true;
   state.phase = QUESTION;
-  //background(220);
+  //background("#f5cbd1");
   for(let m = 0; m < questionsArray.length; m++) {
     questionsArray[m].show();
   }
@@ -175,13 +175,14 @@ function checkAnswerHit(mouseX, mouseY) {
 }
 
 function checkMatch() {
+  background("#f5cbd1");
   console.log("checking match", state.currentQuestion.ref, state.currentAnswer.ref);
   if (state.currentQuestion.ref === state.currentAnswer.ref) {
     state.currentQuestion.isMatch = true;
     state.numMatches++;
     fill("#611e28");
     textSize(30);
-    text("That's " + state.numMatches + "correct answers!", 650, 75);
+    text("That's " + state.numMatches + " correct!", 720, 100);
     // good place to provide feedback for correct answer/ add sound here?
     console.log("successful attempt")
     state.currentQuestion = null;
