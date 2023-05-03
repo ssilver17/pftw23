@@ -57,7 +57,12 @@ function preload() {
       questionImage: loadImage("images/q-7.png"),
       answerImage: loadImage("images/7.png"),
       reference: 7
-    }
+    },
+    //     {
+    //   questionImage: loadImage("images/q-8.png"),
+    //   answerImage: loadImage("images/8.png"),
+    //   reference: 8
+    // }
   ]
 }
 function setup() {
@@ -74,7 +79,7 @@ function setup() {
   // layout playing board
   // questions
   let selectedQuestionIndex = 0; // we'll have to track this ourselves
-      for(let j = 0; j< 2; j++) {         //question cards
+      for(let j = 0; j < 2; j++) {         //question cards
         for(let i = 0; i < 3; i++) {    
             // just setting x and y here
             questionsArray[selectedQuestionIndex].x = startingQuestionX;
@@ -97,12 +102,21 @@ function setup() {
         startingAnswerY += 200;
         startingAnswerX = 720;   //sets starting location for new row              
     }
+    
 }
 
 function draw() {
+    // noStroke(); 
+    // fill("#611e28");
+    // quad(0, 0, 546, 0, 621, 125, 0, 125);   //header
+    // fill("#f57a8d");
+    // quad(560, 0, 800, 0, 875, 125, 635, 125);   //attempts
+    // fill("#9a700a");
+    // quad(814, 0, 1200, 0, 1200, 125, 889, 125);     //matches
+
   // state.questionPhase = true;
   state.phase = QUESTION;
-  background(220);
+  //background(220);
   for(let m = 0; m < questionsArray.length; m++) {
     questionsArray[m].show();
   }
@@ -165,7 +179,10 @@ function checkMatch() {
   if (state.currentQuestion.ref === state.currentAnswer.ref) {
     state.currentQuestion.isMatch = true;
     state.numMatches++;
-    // good place to provide feedback for correct answer
+    fill("#611e28");
+    textSize(30);
+    text("That's " + state.numMatches + "correct answers!", 650, 75);
+    // good place to provide feedback for correct answer/ add sound here?
     console.log("successful attempt")
     state.currentQuestion = null;
     state.currentAnswer = null;
