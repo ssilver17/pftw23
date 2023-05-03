@@ -183,7 +183,7 @@ function checkMatch() {
     state.numMatches++;
     fill("#611e28");
     textSize(30);
-    text("That's " + state.numMatches + " correct!", 720, 100); //correct feedback
+    text("That's " + state.numMatches + " correct!", 720, 100); //correct answer feedback
     twinkle.play(); //sound for correct answer
     
     console.log("successful attempt")
@@ -192,11 +192,10 @@ function checkMatch() {
     state.phase = QUESTION;
     loop();
   } else {
-    // good place to provide feedback for incorrect answer
     fill("#611e28");
     textSize(30);
-    text("Try again!", 500, 100);
-    console.log("oops! try again");
+    text("Try again!", 500, 100); //feedback for incorrect answer
+    console.log("oops! try again"); 
 
     noLoop();
     const loopTimeout = window.setTimeout(() => {  //time betwen card flips
