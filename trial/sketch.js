@@ -38,17 +38,12 @@ function preload() {
       answerImage: loadImage("images/2.png"),
       reference: 2
     },
-    //     {
-    //   questionImage: loadImage("images/q-3.png"),
-    //   answerImage: loadImage("images/3.png"),
-    //   reference: 3
-    // },
-    {
+        {
       questionImage: loadImage("images/q-4.png"),
       answerImage: loadImage("images/4.png"),
       reference: 4
     },
-        {
+    {
       questionImage: loadImage("images/q-5.png"),
       answerImage: loadImage("images/5.png"),
       reference: 5
@@ -57,6 +52,11 @@ function preload() {
       questionImage: loadImage("images/q-6.png"),
       answerImage: loadImage("images/6.png"),
       reference: 6
+    },
+        {
+      questionImage: loadImage("images/q-7.png"),
+      answerImage: loadImage("images/7.png"),
+      reference: 7
     }
   ]
 }
@@ -85,7 +85,7 @@ function setup() {
     startingQuestionY +=200;
     startingQuestionX = 60;   //sets starting location for new row              
     } 
-    // setting answer coords
+    // setting answer cards
   let selectedAnswerIndex = 0; // we'll have to track this ourselves
     for (let r = 0; r < 2; r++) {           //answer cards
         for (let q = 0; q < 3; q++) {   
