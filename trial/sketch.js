@@ -12,12 +12,12 @@ const CHECK = "check";
 const SETUP = "setup"
 let imageBack;
 let state = {
-  // waiting: false,
-  // questionPhase: false,
-  // checkQuestionPhase: false,
+  waiting: false,
+  questionPhase: false,
+  checkQuestionPhase: false,
   phase: SETUP,
   numMatches: 0,
-  numPairs: 8,
+  numPairs: 12,
   currentQuestion: null,
   currentAnswer: null
 }
@@ -26,7 +26,7 @@ let twinkle;  //sound
 let problems = [];
 function preload() {
   twinkle = loadSound('twinkle.mp3');
-  cardBack = loadImage("images/cardback.jpg")
+  cardBack = loadImage("images/cardback.png")
   // make one array of problem objects
   // this example will error b/c there are no actual images to load
   console.log("preloading")
@@ -96,7 +96,6 @@ function preload() {
 function setup() {
   console.log("setting up")
   createCanvas(1200, 1000);
-  //background("#f5cbd1"); 
   // make question and answer arrays
   for (let i = 0; i < problems.length; i++) {
     questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) // we'll set X and Y later
@@ -173,8 +172,8 @@ function checkQuestionHit(mouseX, mouseY) {
  questionsArray.forEach((question) => {
   if(question.didHit(mouseX, mouseY)){
       state.currentQuestion = question;
-      // state.questionPhase = false;
-      // state.checkQuestionPhase = true;
+      state.questionPhase = false;
+      state.checkQuestionPhase = true;
       state.phase = CHECK;
       console.log("hit")
   }
@@ -186,8 +185,8 @@ function checkAnswerHit(mouseX, mouseY) {
     
     if (answersArray[a].didHit(mouseX, mouseY)) {
       state.currentAnswer = answersArray[a];
-      // state.checkQuestionPhase = false;
-      // state.waiting = true;
+      state.checkQuestionPhase = false;
+      state.waiting = true;
       state.phase = WAITING
       checkMatch();
     } else {

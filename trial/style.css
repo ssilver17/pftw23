@@ -21,6 +21,14 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  color: #f5cbd1;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 #restart {
   display: block;
   margin: 0 auto;
