@@ -70,6 +70,26 @@ function preload() {
       questionImage: loadImage("images/q-9.png"),
       answerImage: loadImage("images/9.png"),
       reference: 9
+    },
+        {
+      questionImage: loadImage("images/q-10.png"),
+      answerImage: loadImage("images/10.png"),
+      reference: 10
+    },
+        {
+      questionImage: loadImage("images/q-11.png"),
+      answerImage: loadImage("images/11.png"),
+      reference: 11
+    },
+        {
+      questionImage: loadImage("images/q-14.png"),
+      answerImage: loadImage("images/14.png"),
+      reference: 14
+    },
+        {
+      questionImage: loadImage("images/q-15.png"),
+      answerImage: loadImage("images/15.png"),
+      reference: 15
     }
   ]
 }
@@ -82,12 +102,13 @@ function setup() {
     questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) // we'll set X and Y later
     answersArray.push(new AnswerCard( problems[i].answerImage, problems[i].reference)) // we'll set X and Y later
   }
+  console.log(questionsArray.length, answersArray.length);
   questionsArray = shuffleArray(questionsArray); // randomizing order for questions
   answersArray = shuffleArray(answersArray);
   // layout playing board
   // questions
   let selectedQuestionIndex = 0; // we'll have to track this ourselves
-      for(let j = 0; j < 2; j++) {         //question cards
+      for(let j = 0; j < 4; j++) {         //question cards
         for(let i = 0; i < 3; i++) {    
             // just setting x and y here
             questionsArray[selectedQuestionIndex].x = startingQuestionX;
@@ -100,7 +121,7 @@ function setup() {
     } 
     // setting answer cards
   let selectedAnswerIndex = 0; // we'll have to track this ourselves
-    for (let r = 0; r < 2; r++) {           //answer cards
+    for (let r = 0; r < 4; r++) {           //answer cards
         for (let q = 0; q < 3; q++) {   
             answersArray[selectedAnswerIndex].x = startingAnswerX;
             answersArray[selectedAnswerIndex].y = startingAnswerY;
@@ -297,3 +318,4 @@ function shuffleArray (array) {
     }
     return array;
 }
+
