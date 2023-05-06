@@ -27,8 +27,7 @@ let problems = [];
 function preload() {
   twinkle = loadSound('twinkle.mp3');
   cardBack = loadImage("images/cardback.png")
-  // make one array of problem objects
-  // this example will error b/c there are no actual images to load
+  //array of problem objects
   console.log("preloading")
   problems = [
     {
@@ -98,15 +97,15 @@ function setup() {
   createCanvas(1200, 1000);
   // make question and answer arrays
   for (let i = 0; i < problems.length; i++) {
-    questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) // we'll set X and Y later
-    answersArray.push(new AnswerCard( problems[i].answerImage, problems[i].reference)) // we'll set X and Y later
+    questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) 
+    answersArray.push(new AnswerCard( problems[i].answerImage, problems[i].reference)) 
   }
   console.log(questionsArray.length, answersArray.length);
   questionsArray = shuffleArray(questionsArray); // randomizing order for questions
   answersArray = shuffleArray(answersArray);
   // layout playing board
   // questions
-  let selectedQuestionIndex = 0; // we'll have to track this ourselves
+  let selectedQuestionIndex = 0; 
       for(let j = 0; j < 4; j++) {         //question cards
         for(let i = 0; i < 3; i++) {    
             // just setting x and y here
@@ -119,12 +118,12 @@ function setup() {
     startingQuestionX = 60;   //sets starting location for new row              
     } 
     // setting answer cards
-  let selectedAnswerIndex = 0; // we'll have to track this ourselves
+  let selectedAnswerIndex = 0; 
     for (let r = 0; r < 4; r++) {           //answer cards
         for (let q = 0; q < 3; q++) {   
             answersArray[selectedAnswerIndex].x = startingAnswerX;
             answersArray[selectedAnswerIndex].y = startingAnswerY;
-          selectedAnswerIndex++; // tick up by 1
+            selectedAnswerIndex++; // tick up by 1
             startingAnswerX += 160;
         }
         startingAnswerY += 200;
@@ -229,7 +228,7 @@ function checkMatch() {
                 loop();
                 window.clearTimeout(loopTimeout);
 
-            }, 2000)
+            }, 1000)
   }
 }
 
