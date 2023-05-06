@@ -111,7 +111,7 @@ function setup() {
             // just setting x and y here
             questionsArray[selectedQuestionIndex].x = startingQuestionX;
             questionsArray[selectedQuestionIndex].y = startingQuestionY;
-            selectedQuestionIndex++; // increment by 1
+             selectedQuestionIndex++; // increment by 1
             startingQuestionX += 210;                       
         }
     startingQuestionY +=200;
@@ -316,4 +316,11 @@ function shuffleArray (array) {
     }
     return array;
 }
+
+//restart game
+const restartButton = document.getElementsById("restart");
+//add event listener to restart button
+restartButton.addEventListener("click", () => {
+  console.log("restart");
+});
 

@@ -34,15 +34,26 @@ h2 {
   margin: 0 auto;
   margin-top: 10px;
   padding: 10px 20px;
-  color: #f5cbd1;
-  background-color: #611e28;
+  background-color: #f5cbd1;
+  color: #611e28;
   border: 2px, solid gray;
   border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 1rem;
   text-align: center;
+}
 
+.button-container {
+  background-color: #611e28;
+  padding: 5px;
+  margin: 0;
+  width: 1200px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
 
-
+button:hover {
+  cursor: pointer;
+  background-color: gray;
 }
