@@ -146,6 +146,7 @@ function draw() {
   noLoop();
 }
 
+
 function mousePressed() {
   console.log(state.phase)
   // only allow questions to be clicked
@@ -317,10 +318,5 @@ function shuffleArray (array) {
     return array;
 }
 
-//restart game
-const restartButton = document.getElementsById("restart");
-//add event listener to restart button
-restartButton.addEventListener("click", () => {
-  console.log("restart");
-});
+
 
