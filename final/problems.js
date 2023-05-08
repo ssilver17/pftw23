@@ -95,7 +95,7 @@ function preload() {
 function setup() {
   console.log("setting up")
   createCanvas(1200, 1000);
-  // make question and answer arrays
+  // make question and answer arrays.  something in here is causing the extra corner card. 
   for (let i = 0; i < problems.length; i++) {
     questionsArray.push(new QuestionCard( problems[i].questionImage, problems[i].reference)) 
     answersArray.push(new AnswerCard( problems[i].answerImage, problems[i].reference)) 
