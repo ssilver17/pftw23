@@ -26,7 +26,7 @@ let twinkle;  //sound
 let problems = [];
 function preload() {
   twinkle = loadSound('twinkle.mp3');
-  cardBack = loadImage("images/cardback.png")
+  cardBack = loadImage("images/cardback.png");
   //array of problem objects
   console.log("preloading")
   problems = [
@@ -136,7 +136,7 @@ function draw() {
 
   // state.questionPhase = true;
   state.phase = QUESTION;
-  //background("#f5cbd1");
+  
   for(let m = 0; m < questionsArray.length; m++) {
     questionsArray[m].show();
   }
@@ -232,6 +232,7 @@ function checkMatch() {
             }, 1000)
   }
 }
+
 
 class QuestionCard {
     constructor(cardFaceImg, ref) {            //problem card
