@@ -158,11 +158,11 @@ function mousePressed() {
     console.log("checking answer")
     checkAnswerHit(mouseX, mouseY);
   } else {
-    console.log("only answers can be selected right now") 
+   
     
   }
   if (state.waiting === WAITING) {
-    console.log("waiting to reset")
+    
   }
   
 }
@@ -215,7 +215,7 @@ function checkMatch() {
     fill("#611e28");
     textSize(30);
     text("Try again!", 500, 100); //feedback for incorrect answer
-    console.log("oops! try again"); 
+    
 
     noLoop();
     const loopTimeout = window.setTimeout(() => {  //time betwen card flips
@@ -224,7 +224,6 @@ function checkMatch() {
       state.currentQuestion.face = DOWN
       state.currentQuestion = null;
       state.currentAnswer = null;
-      console.log("move back to question phase")
       state.phase = QUESTION
                 loop();
                 window.clearTimeout(loopTimeout);
